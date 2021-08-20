@@ -1,2 +1,35 @@
-# JT218-20
-Proposal on August 20, 2021, the idea of knowledge base and community
+# knowledge base
+**阶段：** 1
+
+knowledge base（知识库）是一个通过 JT218-20 项目所设立的一个提案，用于满足社区和团队在未来对知识检索的需求以及汇总社区即团队所产出的知识文档。其主要的最初想法是维护一个更加快速和方便的专业名词和注解以及各类语法的汇总，因此 JT218-20 提案会因此维护排除自身以外的项目，来满足整个 ```knowledge base``` 项目。
+
+
+## Info
+在 JT218-20 项目中，项目的核心并不是 ```knowledge base```，而是他衍生出的各类标签分支，这主要分为：
+In the JT218-20 project, the core of the project is not ```knowledge base```, but various tag branches derived from it, which are mainly divided into:
+
+1. 需要维护各类 **语言标签** 和该 **语言衍生** 出的标签，如：
+    1. ECMAS
+        1. JavaScript
+        2. Node
+2. 需要维护的 **技术栈** 分类标签
+    1. Web
+        1. Spring Cloud
+            1. Sentinel
+3. 以及这些 **技术栈所产出的各类词汇**
+    1. Spring Cloud
+        1. 限流
+        2. 直接失败
+        3. 直接限流
+        4. 埋点
+        5. 关联限流
+4. 和这些词汇所产出的方法\函数\命令\注解：
+    1. Spring Cloud Bus
+        1. @EnableConfigServer
+
+本质上，知识库所维护的是一个词汇表，并做了详细的分类，而这些都指向了存储的服务器中，因此我们需要的设计目标是：
+
+- **通过关键字搜索相关的技术栈信息** ： 这个就是我们需要持续维护的 ```.json``` \ ```.xml``` 文件，用于存储这些词汇表。
+    - 在前期资金不足的情况下可以通过 ```github``` 进行存储，直接通过 ```github pages``` 来提供静态的服务支持;
+    - 如服务器数量有余，可以通过数据库的方式进行存储，并将数据库信息转为 ```.json``` \ ```.xml``` 文件，前端进行解析，当然也可以配合数据库来进行读写从而实现 提交 -> 写入 -> 查询。这样的好处是可以让更多其他领域的人参与进来，共同维护知识库的词汇量，从而提供面向更多领域的知识库，但缺点是需要资金的投入;
+        - 面对高并发情况下，通过集群的方式，来提供高性能的服务提供，由 Spring 和 Node 进行配合，从而实现在线提交 -> 写入 -> 查询的服务，一次来应对海量流量请求的问题
