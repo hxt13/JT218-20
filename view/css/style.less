@@ -1,0 +1,217 @@
+// 浏览器最大宽度
+@layout_width_beat: 90%;
+
+// 字体
+@font_bold: "Noto Sans CJK SC Bold";
+// 颜色
+@color_ash: #dfdfdf;
+@color_blue: #007fff;
+@color_green: #1ec0ff;
+@color_water: #a3daff;
+
+body {
+  width: @layout_width_beat;
+  margin: auto;
+  padding: 4%;
+}
+
+@media screen {
+  .layout_md {
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-gap: 10px;
+  }
+  @media (max-width: 1440px) {
+    .layout_md {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+#header {
+  display: flow-root;
+  a img {
+    width: 15%;
+    float: left;
+  }
+  ul {
+    float: left;
+    line-height: 92.66px;
+    display: contents;
+  }
+  ul li {
+    float: left;
+    list-style: none;
+    cursor: pointer;
+    font-family: @font_bold;
+    font-size: 1.7em;
+    border-left: 2px solid @color_ash;
+    padding-left: 1.5em;
+    margin-left: 1.4em;
+    color: @color_ash;
+    line-height: initial;
+  }
+  ul li span{
+    color: @color_blue;
+  }
+  logo_label {
+    background: @color_green;
+    border-radius: 5px;
+    font-size: 0.6em;
+    padding: 2px;
+    color: white;
+  }
+}
+
+#form {
+  display: inline-block;
+  margin-top: 5%;
+  width: 100%;
+
+  form input {
+    outline: none;
+    width: 55%;
+    padding: 10px 20px;
+    font-size: 1.7em;
+    font-family: @font_bold;
+    border: none;
+    box-shadow: -22px -6px 24px #eeeeee, 3px 9px 21px #eeeeee;
+    border-radius: 2px;
+    position: fixed;
+
+    &:hover {
+      box-shadow: 0px -2px 24px #d7ebff, 3px 9px 21px #f5faff;
+      transition: 1s;
+      width: 60%;
+      transform: scale(1);
+    }
+
+    &:focus {
+      box-shadow: 0px -2px 24px #d7ebff, 3px 9px 21px #f5faff;
+      transition: 1s;
+      width: 60%;
+      transform: scale(1);
+    }
+  }
+
+  span::before {
+    content: "";
+    left: 8.5px;
+    top: -7px;
+    width: 9px;
+    height: 17px;
+    border-right: 3px solid @color_blue;
+    border-bottom: 2px solid @color_blue;
+    transform: rotate(45deg);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+#end {
+  width: 100%;
+  margin-top: 10%;
+  @media screen {
+    h1 {
+      font-family: @font_bold;
+    }
+    @media (max-width: 1440px) {
+      h1 {
+        margin-top: 20%;
+      }
+    }
+  }
+  ul {
+    padding: 0;
+    margin-bottom: 5.9em;
+    display: flow-root;
+  }
+  li p {
+    margin: 0;
+    font-family: "Noto Sans CJK SC Regular";
+    font-size: 1.6em;
+  }
+  li p span {
+    background: #f1f1f1;
+    font-size: 0.3em;
+    margin-left: 0.5%;
+    padding: 2px;
+    border-radius: 4px;
+    color: #949494;
+    vertical-align: baseline;
+  }
+  ul li {
+    list-style: none;
+  }
+  ul label {
+    float: left;
+    display: contents;
+  }
+  ul li licen {
+    float: left;
+    list-style: none;
+    font-family: @font_bold;
+  }
+  ul li tag {
+    float: left;
+    list-style: none;
+    font-family: @font_bold;
+  }
+  ul li noun {
+    float: left;
+    list-style: none;
+    font-family: @font_bold;
+  }
+  licen {
+    background: @color_blue;
+    text-align: center;
+    padding: 4px;
+    border-radius: 9px;
+    margin-right: 13px;
+    color: white;
+    margin-top: 0.5em;
+  }
+  tag {
+    background: @color_green;
+    text-align: center;
+    padding: 4px;
+    border-radius: 9px;
+    margin-right: 13px;
+    color: white;
+    margin-top: 0.5em;
+  }
+  noun {
+    background: @color_water;
+    text-align: center;
+    padding: 4px;
+    border-radius: 9px;
+    margin-right: 13px;
+    color: white;
+    margin-top: 0.5em;
+  }
+}
+
+#by {
+  margin-top: 100%;
+  p ul {
+    float: left;
+  }
+  ul {
+    padding: 0;
+    font-family: "Noto Sans CJK SC Regular";
+    font-size: 1.0em;
+    float: right;
+    color: @color_ash;
+    line-height: 0.8em;
+    position: fixed;
+    margin-left: 13%;
+  }
+  ul li {
+    list-style: none;
+    float: right;
+  }
+  li a {
+    text-decoration: none;
+    color: @color_ash;
+  }
+}
