@@ -43,7 +43,7 @@ body {
   color: #007fff;
 }
 #header logo_label {
-  background: #1ec0ff;
+  background: #007fff96;
   border-radius: 5px;
   font-size: 0.6em;
   padding: 2px;
@@ -54,7 +54,7 @@ body {
   margin-top: 5%;
   width: 100%;
 }
-#form form input {
+#form input {
   outline: none;
   width: 55%;
   padding: 10px 20px;
@@ -65,13 +65,13 @@ body {
   border-radius: 2px;
   position: fixed;
 }
-#form form input:hover {
+#form input:hover {
   box-shadow: 0px -2px 24px #d7ebff, 3px 9px 21px #f5faff;
   transition: 1s;
   width: 60%;
   transform: scale(1);
 }
-#form form input:focus {
+#form input:focus {
   box-shadow: 0px -2px 24px #d7ebff, 3px 9px 21px #f5faff;
   transition: 1s;
   width: 60%;
@@ -88,6 +88,48 @@ body {
   transform: rotate(45deg);
   position: relative;
   z-index: 1;
+}
+#point {
+  position: absolute;
+  background: white;
+  width: 55%;
+  height: auto;
+  margin-top: 3%;
+  padding: 20px;
+  display: none;
+  box-shadow: -22px -6px 24px #ffff, 10px 16px 86px #eeeeee;
+  border-radius: 2px;
+  position: fixed;
+  z-index: 1;
+}
+#point ul li {
+  list-style: none;
+  font-family: "Noto Sans CJK SC Bold";
+}
+#point ul li tag {
+  float: left;
+  background: #80beff;
+  font-size: 0.3em;
+  padding: 2px;
+  border-radius: 4px;
+  color: #ffffff;
+  vertical-align: baseline;
+  margin-right: 1.2%;
+  margin-top: 1.1%;
+}
+#point ul li nouns {
+  float: left;
+  background: #007fff12;
+  font-size: 0.3em;
+  padding: 2px;
+  border-radius: 4px;
+  color: #a1aab3;
+  vertical-align: baseline;
+  margin-right: 1.2%;
+  margin-top: 1.1%;
+}
+#point ul {
+  margin-bottom: 4em;
 }
 #end {
   width: 100%;
@@ -108,19 +150,23 @@ body {
   margin-bottom: 5.9em;
   display: flow-root;
 }
-#end li p {
+#end li a {
   margin: 0;
   font-family: "Noto Sans CJK SC Regular";
   font-size: 1.6em;
+  list-style: none;
+  color: black;
+  text-decoration: none;
 }
-#end li p span {
-  background: #f1f1f1;
+#end span {
+  background: #edf6ff;
   font-size: 0.3em;
   margin-left: 0.5%;
   padding: 2px;
   border-radius: 4px;
-  color: #949494;
+  color: #818d98;
   vertical-align: baseline;
+  font-family: "Noto Sans CJK SC Regular";
 }
 #end ul li {
   list-style: none;
@@ -144,6 +190,11 @@ body {
   list-style: none;
   font-family: "Noto Sans CJK SC Bold";
 }
+#end ul li derive {
+  float: left;
+  list-style: none;
+  font-family: "Noto Sans CJK SC Bold";
+}
 #end licen {
   background: #007fff;
   text-align: center;
@@ -154,7 +205,7 @@ body {
   margin-top: 0.5em;
 }
 #end tag {
-  background: #1ec0ff;
+  background: #007fff96;
   text-align: center;
   padding: 4px;
   border-radius: 9px;
@@ -169,6 +220,15 @@ body {
   border-radius: 9px;
   margin-right: 13px;
   color: white;
+  margin-top: 0.5em;
+}
+#end derive {
+  background: #007fff12;
+  text-align: center;
+  padding: 4px;
+  border-radius: 9px;
+  margin-right: 13px;
+  color: #b7c9da;
   margin-top: 0.5em;
 }
 #by {

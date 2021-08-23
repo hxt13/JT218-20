@@ -6,8 +6,10 @@
 // 颜色
 @color_ash: #dfdfdf;
 @color_blue: #007fff;
-@color_green: #1ec0ff;
-@color_water: #a3daff;
+@color_hulan: #007fff96;
+@color_tianqing: #a3daff;
+@color_xuebai: #007fff12;
+@color_shuangse: #b7c9da;
 
 body {
   width: @layout_width_beat;
@@ -55,7 +57,7 @@ body {
     color: @color_blue;
   }
   logo_label {
-    background: @color_green;
+    background: @color_hulan;
     border-radius: 5px;
     font-size: 0.6em;
     padding: 2px;
@@ -68,7 +70,7 @@ body {
   margin-top: 5%;
   width: 100%;
 
-  form input {
+  input {
     outline: none;
     width: 55%;
     padding: 10px 20px;
@@ -108,6 +110,48 @@ body {
   }
 }
 
+#point {
+  position: absolute;
+  background: white;
+  width: 55%;
+  height: auto;
+  margin-top: 3%;
+  padding: 20px;
+  display: none;
+  box-shadow: -22px -6px 24px #ffff, 10px 16px 86px #eeeeee;
+  border-radius: 2px;
+  position: fixed;
+  z-index: 1;
+  ul li {
+    list-style: none;
+    font-family: @font_bold;
+  }
+  ul li tag {
+    float: left;
+    background: rgb(128, 190, 255);
+    font-size: 0.3em;
+    padding: 2px;
+    border-radius: 4px;
+    color: #ffffff;
+    vertical-align: baseline;
+    margin-right: 1.2%;
+    margin-top: 1.1%;
+  }
+  ul li nouns {
+    float: left;
+    background: #007fff12;
+    font-size: 0.3em;
+    padding: 2px;
+    border-radius: 4px;
+    color: #a1aab3;
+    vertical-align: baseline;
+    margin-right: 1.2%;
+    margin-top: 1.1%;
+  }
+  ul {
+    margin-bottom: 4em;
+  }
+}
 #end {
   width: 100%;
   margin-top: 10%;
@@ -126,19 +170,23 @@ body {
     margin-bottom: 5.9em;
     display: flow-root;
   }
-  li p {
+  li a {
     margin: 0;
     font-family: "Noto Sans CJK SC Regular";
     font-size: 1.6em;
+    list-style: none;
+    color: black;
+    text-decoration: none;
   }
-  li p span {
-    background: #f1f1f1;
+  span {
+    background: #edf6ff;
     font-size: 0.3em;
     margin-left: 0.5%;
     padding: 2px;
     border-radius: 4px;
-    color: #949494;
+    color: #818d98;
     vertical-align: baseline;
+    font-family: "Noto Sans CJK SC Regular";
   }
   ul li {
     list-style: none;
@@ -157,7 +205,12 @@ body {
     list-style: none;
     font-family: @font_bold;
   }
-  ul li noun {
+  ul li noun  {
+    float: left;
+    list-style: none;
+    font-family: @font_bold;
+  }
+  ul li derive  {
     float: left;
     list-style: none;
     font-family: @font_bold;
@@ -172,7 +225,7 @@ body {
     margin-top: 0.5em;
   }
   tag {
-    background: @color_green;
+    background: @color_hulan;
     text-align: center;
     padding: 4px;
     border-radius: 9px;
@@ -181,12 +234,21 @@ body {
     margin-top: 0.5em;
   }
   noun {
-    background: @color_water;
+    background: @color_tianqing;
     text-align: center;
     padding: 4px;
     border-radius: 9px;
     margin-right: 13px;
     color: white;
+    margin-top: 0.5em;
+  }
+  derive {
+    background: @color_xuebai;
+    text-align: center;
+    padding: 4px;
+    border-radius: 9px;
+    margin-right: 13px;
+    color: @color_shuangse;
     margin-top: 0.5em;
   }
 }
