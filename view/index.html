@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>knowledge base - Jiangxue Team</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+</head>
+<body>
+    <div class="layout_md">
+        <div>
+            <div id="header">
+                <a href="#"><img src="https://gitee.com/analysis-of-river-snow/drawing-bed/raw/master/20210820215925.png"></a>
+                <ul>
+                    <li>knowledge <span>base</span><br><logo_label>Github</logo_label></li>
+                </ul>
+            </div>
+            <div id="form">
+                    <span><input type="text" id="search" autocomplete="off"></span>
+                <div id="point">
+                    <ul></ul>
+                </div>
+                <script type="application/javascript">
+                    var $search = $("#search")
+                    var $point = $("#point")
+                    var $pointUl = $("#point>ul")
+
+                    function clearUl() {
+                        $pointUl.empty();
+                    }
+                    $search.bind("input", function () {
+                        clearUl()
+                        var value = $(this).val();
+                        $.getJSON("info.json", function (data) {
+                            $.each(data, function (input, obj) {
+                                var name = obj.tag;
+                                if (name.indexOf(value) >= 0) {
+                                    var valueAll = obj.all;
+                                    var valueTag = obj.tag;
+                                    var valueNouns = obj.nouns;
+                                    $.each(valueAll, function (input, all) {
+                                        $pointUl.append(`<ul>`)
+                                        $pointUl.append(`<li>${all}</li>`)
+                                    });
+                                    $.each(valueTag, function (index, tag) {
+                                        $pointUl.append(`<li><tag>${tag}</tag></li>`)
+                                    })
+                                    $.each(valueNouns, function (input, nouns) {
+                                        $pointUl.append(`<li><nouns>${nouns}</nouns></li>`)
+                                    })
+                                    $pointUl.append(`</ul>`)
+                                }
+                            });
+                        });
+                        $point.css("display","block")
+                    }).bind("blur", function () {
+                        $point.css("display","none");
+                    })
+                </script>
+            </div>
+            <div id="end">
+                <h1>Recently update</h1>
+                <script type="application/javascript">
+                    $.ajax({
+                        url: "info.json",
+                        type: "get",
+                        dataType: "json",
+                        success: function (data) {
+                            var str = ""
+                            $.each(data, function (index,info) {
+                                str += "<ul>"
+                                str += "<li>" + "<a href='" + info.url + "' target='_blank'>" + info.title + "</a><span>" + "TIME" + info.author + "-" + info.time + "</span></p></li>"
+                                str += "<li><licen>" + info.license + "</licen></li>"
+
+                                for (i=0; i<info.tag.length; i++) {
+                                    str += "<li><tag>" + info.tag[i] + "</tag></li>"
+                                }
+
+                                for (i=0; i<info.nouns.length; i++) {
+                                    str += "<li><noun>" + info.nouns[i] + "</noun></li>"
+                                }
+
+                                for (i=0; i<info.derives.length; i++) {
+                                    str += "<li><derive>" + info.derives[i] + "</derive></li>"
+                                }
+
+                                str += "</ul>"
+                            })
+                            $("#end").html(str);
+                        }
+                    })
+                </script>
+            <!--
+                <ul id="update">
+                    <li><p>Node.js at ECMASCript<span>up:Muqu time:2021-08-15</span></p></li>
+                    <li><licen>Mit</licen></li>
+                    <li><tag>Node</tag></li>
+                    <li><tag>Warm Up</tag></li>
+                    <li><tag>@EnableConfigServer</tag></li>
+                    <li><noun>Alibaba</noun></noun></li>
+                    <li><noun>限流</noun></noun></li>
+                    <li><noun>直接失败</noun></li>
+                    <li><noun>埋点</noun></li>
+                    <li><noun>关联限流</noun></li>
+                    <li><noun>Warm Up</noun></li>
+                    <li><noun>排队限流</noun></li>
+                    <li><noun>链路限流</noun></li>
+                </ul>
+              -->
+            </div>
+        </div>
+        <div>
+            <div id="by">
+                <ul>
+                    <p><b>MIT License 2015 Jiangxue JT218-20 sign</b></p>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">issue</a> - </li>
+                    <li><a href="#">contribute to the project</a> - </li>
+                    <li><c>About</c></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
