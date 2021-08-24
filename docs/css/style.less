@@ -111,12 +111,9 @@ body {
 }
 
 #point {
-  position: absolute;
   background: white;
   width: 55%;
-  height: auto;
   margin-top: 3%;
-  padding: 20px;
   display: none;
   box-shadow: -22px -6px 24px #ffff, 10px 16px 86px #eeeeee;
   border-radius: 2px;
@@ -148,8 +145,15 @@ body {
     margin-right: 1.2%;
     margin-top: 1.1%;
   }
-  ul {
-    margin-bottom: 4em;
+  @media screen {
+    ul {
+      margin-bottom: 6em;
+    }
+    @media (max-width: 1024px) {
+      ul {
+        margin-bottom: 9em;
+      }
+    }
   }
 }
 #end {

@@ -1,87 +1,194 @@
 [
   {
-    "title": "Node.js at ECMAScript",
-    "time": "2021-8-15",
-    "author": "Muqu",
+    "title": "Node.js info at npm",
+    "time": "2021-08-12",
+    "author": "lk.sun",
     "license": "MIT",
-    "url": "https://baidu.com",
+    "url": "https://sif_one.gitee.io/2021/08/12/node-js/",
     "tag": [
-      "Node",
-      "ECMAS",
       "JavaScript",
+      "ECMAScript version 6",
+      "Node",
+      "Npm",
       "Web"
     ],
     "nouns": [
+      "交互式环境",
+      "REPL"
     ],
     "derives": [
+      "npm install express",
+      "npm uninstall name",
+      "npm uninstall name --save",
+      "npm uninstall name --save-dev",
+      "npm uninstall name --no-save",
+      "npm update express",
+      "npm update express",
+      "npm outdated",
+      "npm list",
+      "npm list -g",
+      "npm search express",
+      "npm cache clean",
+      "npm start/restart",
+      ".help",
+      ".editor",
+      ".break",
+      ".clear",
+      ".load",
+      ".save",
+      ".exit"
+    ],
+    "all": [
+      "Node.js info at npm"
+    ]
+  },
+    {
+      "title": "Node.js 工作原理",
+      "time": "2021-08-14",
+      "author": "lk.sun",
+      "license": "MIT",
+      "url": "https://sif_one.gitee.io/2021/08/14/node-js-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86",
+      "tag": [
+        "JavaScript",
+        "ECMAScript version 6",
+        "Node",
+        "Npm",
+        "Web"
+      ],
+      "nouns": [
+        "Runtime system",
+        "即时编译",
+        "Cluster",
+        "events",
+        "Node vm",
+        "回调",
+        "同步",
+        "异步",
+        "阻塞",
+        "非阻塞"
+      ],
+      "derives": [
+        "Script",
+        "util.inspect",
+        "runInContext",
+        "readFile",
+        "await",
+        "emit()",
+        ".on()"
+      ],
+      "all": [
+        "Node.js 工作原理"
+      ]
+    },
+  {
+    "title": "Node.js at ECMAScript",
+    "time": "2021-08-15",
+    "author": "lk.sun",
+    "license": "MIT",
+    "url": "https://sif_one.gitee.io/2021/08/15/Node-js-at-ECMAScript/",
+    "tag": [
+      "JavaScript",
+      "ECMAScript version 6",
+      "Node",
+      "Npm",
+      "Babel",
+      "Web"
+    ],
+    "nouns": [
+      "原地算法",
+      "解构赋值",
+      "解构参数",
+      "扩展运算符",
+      "箭头函数等",
+      "不定参数",
+      "闭包",
+      "迭代器",
+      "Symbol",
+      "同值相等",
+      "浅拷贝",
+      "深拷贝",
+      "Prototype",
+      "描述对象",
+      "decorators"
+    ],
+    "derives": [
+      "array.push()",
+      "array.pop()",
+      "array.shift()",
+      "array.splice(start,deleteCount)",
+      "array.concat()",
+      "array.split())",
+      "array.sort()",
+      "array.reverse()",
+      "array.slice(start, end)",
+      "array.forEach(callback(currentValue [, index [, array]])",
+      "array.map(callback(currentValue [, index [, array]])",
+      "array.filter()",
+      "array.every()",
+      "array.some()",
+      "arr.reduce(callback, currentValue[, index[, array]])[, initialValue])",
+      "Array.from()",
+      "Array.of()",
+      "array.copyWithin(target, start, end)",
+      "array.find(index, value, array)",
+      "array.findIndex(index, value, array)",
+      "array.fill(value, start, end)",
+      "array.includes(Value)",
+      "array.keys()",
+      "array.values()",
+      "array.entries()",
+      "Object.is()",
+      "Object.assign()",
+      "Object.keys()",
+      "Object.values()",
+      "Object.entries()",
+      "Objcet.setPrototypeOf()",
+      "Object.getPrototypeOf",
+      "Object.create()",
+      "Object.getOwnPropertyDescriptor",
+      "for...in",
+      "Object.key",
+      "JSON.stringify()",
+      "Object.assign()",
+      "class",
+      "constructor()",
+      "extends",
+      "super",
+      "export",
+      "import",
+      "as"
     ],
     "all": [
       "Node.js at ECMAScript"
     ]
   },
   {
-    "title": "Runtime system",
-    "time": "2021-8-15",
-    "author": "Muqu",
+    "title": "Node.js Model 引入流程",
+    "time": "2021-08-25",
+    "author": "lk.sun",
     "license": "MIT",
+    "url": "https://sif_one.gitee.io/2021/08/25/Node-js-Model-%E5%BC%95%E5%85%A5%E6%B5%81%E7%A8%8B/",
     "tag": [
+      "JavaScript",
+      "ECMAScript version 6",
       "Node",
-      "ECMAS"
+      "Web"
     ],
     "nouns": [
+      "核心模块",
+      "文件模块",
+      "文件缓存区",
+      "原生模块加载",
+      "node_modules",
+      "动态加载"
     ],
     "derives": [
+      "exports",
+      "require",
+      "module.paths"
     ],
     "all": [
-      "Runtime system"
-    ]
-  },
-  {
-    "title": "Spring Cloud Alibaba Sentinel",
-    "time": "2021-8-15",
-    "author": "Muqu",
-    "license": "MIT",
-    "tag": [
-      "Java",
-      "Spring Cloud Alibaba",
-      "Sentinel"
-    ],
-    "nouns": [
-      "限流",
-      "直接失败",
-      "直接限流",
-      "埋点",
-      "关联限流",
-      "Warm Up",
-      "排队限流",
-      "链路限流"
-    ],
-    "derives": [
-    ],
-    "all": [
-      "Spring Cloud Alibaba Sentinel"
-    ]
-  },
-  {
-    "title": "Spring Cloud Config",
-    "time": "2021-8-15",
-    "author": "Muqu",
-    "license": "MIT",
-    "tag": [
-      "Java",
-      "Spring Cloud Alibaba",
-      "Spring Cloud Config",
-      "Spring Cloud Bus"
-    ],
-    "nouns": [
-      "RabbitMQ",
-      "WebHooks"
-    ],
-    "derives": [
-      "@EnableConfigServer"
-    ],
-    "all": [
-      "Spring Cloud Config"
+      "Node.js Model 引入流程"
     ]
   }
 ]

@@ -2,9 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>knowledge base - Jiangxue Team</title>
+    <title>Knowledge base - Jiangxue Team</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://gitee.com/analysis-of-river-snow/drawing-bed/raw/master/20210825003741.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+    <meta name="description" content="Knowledge base(kn.jiangxue.team) Proposal on August 20, 2021, the idea of knowledge base and community">
     <link href="css/style.css" rel="stylesheet" />
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
@@ -36,8 +39,8 @@
                         var value = $(this).val();
                         $.getJSON("info.json", function (data) {
                             $.each(data, function (input, obj) {
-                                var name = obj.tag;
-                                if (name.indexOf(value) >= 0) {
+                                var tag = obj.tag + obj.nouns + obj.derives;
+                                if (tag.indexOf(value)>= 0) {
                                     var valueAll = obj.all;
                                     var valueTag = obj.tag;
                                     var valueNouns = obj.nouns;
@@ -72,7 +75,7 @@
                             var str = ""
                             $.each(data, function (index,info) {
                                 str += "<ul>"
-                                str += "<li>" + "<a href='" + info.url + "' target='_blank'>" + info.title + "</a><span>" + "TIME" + info.author + "-" + info.time + "</span></p></li>"
+                                str += "<li>" + "<a href='" + info.url + "' target='_blank'>" + info.title + "</a><span>" + "TIME:" + info.author + "-" + info.time + "</span></p></li>"
                                 str += "<li><licen>" + info.license + "</licen></li>"
 
                                 for (i=0; i<info.tag.length; i++) {
@@ -93,23 +96,6 @@
                         }
                     })
                 </script>
-            <!--
-                <ul id="update">
-                    <li><p>Node.js at ECMASCript<span>up:Muqu time:2021-08-15</span></p></li>
-                    <li><licen>Mit</licen></li>
-                    <li><tag>Node</tag></li>
-                    <li><tag>Warm Up</tag></li>
-                    <li><tag>@EnableConfigServer</tag></li>
-                    <li><noun>Alibaba</noun></noun></li>
-                    <li><noun>限流</noun></noun></li>
-                    <li><noun>直接失败</noun></li>
-                    <li><noun>埋点</noun></li>
-                    <li><noun>关联限流</noun></li>
-                    <li><noun>Warm Up</noun></li>
-                    <li><noun>排队限流</noun></li>
-                    <li><noun>链路限流</noun></li>
-                </ul>
-              -->
             </div>
         </div>
         <div>
@@ -117,9 +103,8 @@
                 <ul>
                     <p><b>MIT License 2015 Jiangxue JT218-20 sign</b></p>
                     <li><a href="#">about</a></li>
-                    <li><a href="#">issue</a> - </li>
-                    <li><a href="#">contribute to the project</a> - </li>
-                    <li><c>About</c></li>
+                    <li><a href=https://github.com/Jiangxue-team/JT218-20/issues">issue</a> - </li>
+                    <li><a href="https://github.com/Jiangxue-team/JT218-20">contribute to the project</a> - </li>
                 </ul>
             </div>
         </div>

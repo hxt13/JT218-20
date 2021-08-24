@@ -90,12 +90,9 @@ body {
   z-index: 1;
 }
 #point {
-  position: absolute;
   background: white;
   width: 55%;
-  height: auto;
   margin-top: 3%;
-  padding: 20px;
   display: none;
   box-shadow: -22px -6px 24px #ffff, 10px 16px 86px #eeeeee;
   border-radius: 2px;
@@ -128,8 +125,15 @@ body {
   margin-right: 1.2%;
   margin-top: 1.1%;
 }
-#point ul {
-  margin-bottom: 4em;
+@media screen {
+  #point ul {
+    margin-bottom: 6em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #point ul {
+    margin-bottom: 9em;
+  }
 }
 #end {
   width: 100%;
